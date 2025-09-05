@@ -1,0 +1,189 @@
+/* Main page styling with gradient background */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Card styling with rounded corners */
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Header with gradient background */
+.card-header {
+    border-radius: 20px 20px 0 0 !important;
+    background: linear-gradient(45deg, #007bff, #0056b3) !important;
+}
+
+/* Form input styling with focus effects */
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button styling with hover animations */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    transform: rotate(180deg);
+}
+
+.input-group-text {
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #e9ecef;
+    border-left: none;
+}
+
+.input-group .form-control {
+    border-radius: 10px 0 0 10px;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Exchange rate cards with hover effects */
+.rate-card {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.rate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rate-currency {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+.rate-value {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .form-control-lg, .form-select-lg {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 576px) {
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card-header p {
+        font-size: 0.9rem;
+    }
+}
+
+.currency-flag {
+    width: 24px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.success-animation {
+    animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.error-message {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 15px;
+}
